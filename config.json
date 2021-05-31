@@ -1,0 +1,8 @@
+{
+  "Port": "8000",
+  "DBUserName": "root",
+  "DBPassword": "root",
+  "DBIp": "localhost",
+  "DBPort": "3306",
+  "DBName": "blog"
+}
