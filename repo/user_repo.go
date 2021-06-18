@@ -22,7 +22,7 @@ type userRepository struct {}
 
 func (self userRepository) GetUserList()*[]models.User{
 	user:= new([]models.User)
-	err:=db.Raw(`select * FROM user`).Scan(user).RowsAffected
+	err:=db.Raw(`select * FROM users`).Scan(user).RowsAffected
 	if err > 0 {
 		return user
 	}else{
@@ -31,7 +31,7 @@ func (self userRepository) GetUserList()*[]models.User{
 }
 func (self userRepository)GetUserByName(name string )*[]models.User{
 	user := new([]models.User)
-	err := db.Raw(`select * FROM user where user.name = ?`,name).Scan(user).RowsAffected
+	err := db.Raw(`select * FROM users where users.name = ?`,name).Scan(user).RowsAffected
 	if err > 0 {
 		return user
 	}else{
